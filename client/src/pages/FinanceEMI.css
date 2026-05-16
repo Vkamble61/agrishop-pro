@@ -1,0 +1,362 @@
+.finance-page {
+  min-height: 100vh;
+  padding: 2rem 0;
+  background-color: var(--color-background);
+}
+
+.finance-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* Calculator Section */
+.calculator-section {
+  width: 100%;
+}
+
+.section-card {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+  font-size: 1.5rem;
+  color: var(--color-text-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.calculator-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.calculator-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.calculator-form label {
+  font-weight: 600;
+  color: var(--color-text-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.calculator-form .form-input {
+  padding: 0.75rem;
+  border: 2px solid var(--color-border);
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.calculator-form .form-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.calculator-form .btn-lg {
+  grid-column: 1 / -1;
+  margin-top: 1rem;
+}
+
+/* EMI Result */
+.emi-result {
+  background: linear-gradient(135deg, var(--color-primary) 0%, #1a4d14 100%);
+  border-radius: 12px;
+  padding: 2rem;
+  color: white;
+  margin-top: 2rem;
+}
+
+.result-title {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.result-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.result-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.result-card.primary {
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.result-label {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin-bottom: 0.5rem;
+}
+
+.result-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.result-card.primary .result-value {
+  font-size: 2rem;
+}
+
+.down-payment-info {
+  text-align: center;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.down-payment-info p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+/* Loan Schemes */
+.schemes-section {
+  width: 100%;
+}
+
+.section-subtitle {
+  color: var(--color-text-secondary);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.schemes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.scheme-card {
+  background: white;
+  border: 2px solid var(--color-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.scheme-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.scheme-card.selected {
+  border-color: var(--color-primary);
+  box-shadow: 0 4px 16px rgba(45, 80, 22, 0.2);
+}
+
+.scheme-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.scheme-name {
+  font-size: 1.25rem;
+  color: var(--color-text-primary);
+  flex: 1;
+}
+
+.scheme-rate {
+  background: var(--color-primary);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.scheme-description {
+  color: var(--color-text-secondary);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.scheme-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: var(--color-background);
+  border-radius: 8px;
+}
+
+.scheme-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.detail-label {
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.detail-value {
+  color: var(--color-text-primary);
+  font-weight: 500;
+}
+
+.scheme-features {
+  margin-bottom: 1.5rem;
+  flex: 1;
+}
+
+.scheme-features h4 {
+  font-size: 1rem;
+  color: var(--color-text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.scheme-features ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.scheme-features li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  color: var(--color-text-secondary);
+}
+
+.scheme-features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--color-success);
+  font-weight: bold;
+}
+
+.btn-block {
+  width: 100%;
+  justify-content: center;
+}
+
+/* Information Section */
+.info-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.info-card {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-card h3 {
+  font-size: 1.25rem;
+  color: var(--color-primary);
+  margin-bottom: 1.5rem;
+}
+
+.info-card ol,
+.info-card ul {
+  padding-left: 1.5rem;
+  margin: 0;
+}
+
+.info-card li {
+  margin-bottom: 0.75rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+.info-card ol li {
+  padding-left: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .finance-page {
+    padding: 1rem 0;
+  }
+
+  .section-card {
+    padding: 1.5rem;
+  }
+
+  .calculator-form {
+    grid-template-columns: 1fr;
+  }
+
+  .result-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .schemes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .info-section {
+    grid-template-columns: 1fr;
+  }
+
+  .scheme-header {
+    flex-direction: column;
+  }
+
+  .scheme-rate {
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-title {
+    font-size: 1.25rem;
+  }
+
+  .section-title {
+    font-size: 1.25rem;
+  }
+
+  .result-value {
+    font-size: 1.5rem;
+  }
+
+  .result-card.primary .result-value {
+    font-size: 1.75rem;
+  }
+
+  .emi-result {
+    padding: 1.5rem;
+  }
+
+  .info-card {
+    padding: 1.5rem;
+  }
+}
+
+/* Made with Bob */
