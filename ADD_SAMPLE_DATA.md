@@ -18,12 +18,13 @@ MongoDB Atlas connection is failing due to network/DNS issues. Here are multiple
 ### Step 2: Verify Connection String
 Your current connection string in `.env`:
 ```
-MONGODB_URI=mongodb+srv://varshakamble61_db_user:s9tTCYZXFZUIkuqR@rootstack.dqbbvwx.mongodb.net/?appName=RootStack
+#MONGODB_URI=mongodb://localhost:27017/agrishop-pro
+MONGODB_URI=mongodb+srv://db_user:cluster@rootstack.dqbbvwx.mongodb.net/?appName=RootStack
 ```
 
 Add the database name:
 ```
-MONGODB_URI=mongodb+srv://varshakamble61_db_user:s9tTCYZXFZUIkuqR@rootstack.dqbbvwx.mongodb.net/agrishop-pro?retryWrites=true&w=majority
+MONGODB_URI=mongodb+srv://db_user:cluster@rootstack.dqbbvwx.mongodb.net/agrishop-pro?retryWrites=true&w=majority
 ```
 
 ### Step 3: Run Seed Script
