@@ -13,6 +13,7 @@ const orderRoutes = require('./routes/orderRoutes');
 const supplierRoutes = require('./routes/supplierRoutes');
 const loyaltyRoutes = require('./routes/loyaltyRoutes');
 const healthRoutes = require('./routes/healthRoutes');
+const aiRoutes = require('./routes/aiRoutes');
 
 // Import middleware
 const errorHandler = require('./middleware/errorHandler');
@@ -52,6 +53,7 @@ app.use('/api/equipment', equipmentRoutes);
 app.use('/api/orders', orderRoutes);
 app.use('/api/suppliers', supplierRoutes);
 app.use('/api/loyalty', loyaltyRoutes);
+app.use('/api/ai', aiRoutes);
 
 // 404 handler
 app.use((req, res) => {
